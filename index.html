@@ -5,29 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetching Text Files</title>
+    <script src="main.js"></script>
 </head>
 <body>
     <h1>Working with Data & APIs in JS</h1>
 
 
-    <script>
-
-        getTextData();
-        async function getTextData(){
-            const response = await fetch("./TempData.txt");
-            //console.log(response);
-            const data = await response.text();
-            //console.log(data);
-            const table = data.split("\n").slice(2);
-            //console.log(rows);
-            table.forEach(row =>{
-                const cols = row.split(" ");
-                const year = cols[0];
-                const avgTemp = cols[1];
-                console.log(year, avgTemp);
-            });
-
-        }
-    </script>
+    
 </body>
 </html>
